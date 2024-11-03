@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aloisiojr <aloisiojr@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 17:49:41 by aloisiojr         #+#    #+#             */
-/*   Updated: 2024/10/17 14:33:09 by aloisiojr        ###   ########.fr       */
+/*   Created: 2024/10/22 11:40:04 by aloisiojr         #+#    #+#             */
+/*   Updated: 2024/10/22 15:59:18 by aloisiojr        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int ft_isascii(int c)
+int ft_atoi(const char *str)
 {
-  if (c >= 0 && c <= 127)
-    return (1);
-  return (0);
+  size_t i;
+  int f;
+
+  i = 0;
+  f = 1;
+  while (*str == 32 || (*str >= 9 && *str <= 13))
+    str++;
+  if (*str == 45)
+  {
+    str++;
+    f = -1;
+  }
+  else if (*str == 43)
+    str++;
+  while (*str >= 48 && *str <= 57)
+  {
+    i = (i * 10) + (*str - 48);
+    str++;
+  }
+  return(i*f);
 }

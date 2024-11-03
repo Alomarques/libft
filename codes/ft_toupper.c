@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aloisiojr <aloisiojr@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 17:49:41 by aloisiojr         #+#    #+#             */
-/*   Updated: 2024/10/17 14:33:09 by aloisiojr        ###   ########.fr       */
+/*   Created: 2024/10/17 17:45:17 by aloisiojr         #+#    #+#             */
+/*   Updated: 2024/10/17 17:56:07 by aloisiojr        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int ft_isascii(int c)
+int ft_toupper(int ch)
 {
-  if (c >= 0 && c <= 127)
-    return (1);
-  return (0);
+  if (ch >= 97 && ch <= 122)
+  {
+    ch = ch - 32;
+  }
+  return (ch);
 }

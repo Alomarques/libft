@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aloisiojr <aloisiojr@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 17:49:41 by aloisiojr         #+#    #+#             */
-/*   Updated: 2024/10/17 14:33:09 by aloisiojr        ###   ########.fr       */
+/*   Created: 2024/10/22 16:36:47 by aloisiojr         #+#    #+#             */
+/*   Updated: 2024/10/22 18:30:22 by aloisiojr        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int ft_isascii(int c)
+void *ft_calloc(size_t num, size_t size)
 {
-  if (c >= 0 && c <= 127)
-    return (1);
-  return (0);
+  void *ptr;
+  size_t total_size;
+
+  total_size = num * size;
+  ptr = malloc(total_size);
+  if (ptr == NULL)
+    return (NULL);
+
+  ft_memset(ptr, 0, total_size);
+
+  return (ptr);
 }

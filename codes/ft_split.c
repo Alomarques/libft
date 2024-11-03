@@ -1,20 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aloisiojr <aloisiojr@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 17:49:41 by aloisiojr         #+#    #+#             */
-/*   Updated: 2024/10/17 14:33:09 by aloisiojr        ###   ########.fr       */
+/*   Created: 2024/10/24 15:19:20 by aloisiojr         #+#    #+#             */
+/*   Updated: 2024/10/26 10:51:08 by aloisiojr        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int ft_isascii(int c)
+static int count(char const *s, char c)
 {
-  if (c >= 0 && c <= 127)
-    return (1);
-  return (0);
+  size_t i;
+  int words;
+
+  i = 0;
+  words = 0;
+  while (*s)
+  {
+    if (*s != c && words == 0)
+    {
+      words = 1;
+      i++;
+    }
+    if (*s == c)
+    {
+      words = 0;
+    }
+    s++;
+  }
+  return (i);
+}
+char **ft_split(char const *s, char c)
+{
+
+
 }
