@@ -6,39 +6,33 @@
 /*   By: aloisiojr <aloisiojr@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:31:45 by aloisiojr         #+#    #+#             */
-/*   Updated: 2024/10/20 10:52:03 by aloisiojr        ###   ########.fr       */
+/*   Updated: 2024/12/03 18:31:37 by aloisiojr        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void  *ft_memmove(void *dest, const void *src, size_t leng)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-  unsigned char *d = dest;
-  const unsigned char *s = src;
-  size_t i;
-  i = 0;
+	unsigned char	*ptr_src;
+	unsigned char	*ptr_dst;
+	size_t			i;
 
-  if (dest == src)
-  {
-    return (dest);
-  }
-  if (d < s)
-  {
-    while (i < leng)
-    {
-      d[i] = s[i];
-      i++;
-    }
-  }
-  else
-  {
-    i = leng;
-    while (i > 0)
-    {
-      d[i-1] = s[i-1];
-      i--;
-    }
-  }
-  return (dest);
+	ptr_src = (unsigned char *)src;
+	ptr_dst = (unsigned char *)dst;
+	i = -1;
+	if (dst < src && (ptr_dst != NULL || ptr_src != NULL))
+	{
+		while (++i < n)
+			ptr_dst[i] = ptr_src[i];
+	}
+	else if (ptr_dst != NULL || ptr_src != NULL)
+	{
+		while (n > 0)
+		{
+			n--;
+			ptr_dst[n] = ptr_src[n];
+		}
+	}
+	return (dst);
 }

@@ -6,23 +6,21 @@
 /*   By: aloisiojr <aloisiojr@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 19:06:14 by aloisiojr         #+#    #+#             */
-/*   Updated: 2024/10/22 19:13:11 by aloisiojr        ###   ########.fr       */
+/*   Updated: 2024/12/03 16:26:27 by aloisiojr        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-  size_t size;
+	size_t	size;
+	char	*copy;
 
-  size = ft_strlen(s) + 1;
-  char *copy = malloc(size);
-
-  if (copy == NULL)
-    return (NULL);
-
-  ft_memcpy(copy, s, size);
-
-  return (copy);
+	size = ft_strlen(s) + 1;
+	copy = malloc(size);
+	if (copy == NULL)
+		return (NULL);
+	ft_memcpy(copy, s, size);
+	return (copy);
 }

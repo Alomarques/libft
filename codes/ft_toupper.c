@@ -6,17 +6,17 @@
 /*   By: aloisiojr <aloisiojr@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 17:45:17 by aloisiojr         #+#    #+#             */
-/*   Updated: 2024/10/17 17:56:07 by aloisiojr        ###   ########.fr       */
+/*   Updated: 2024/12/03 14:52:13 by aloisiojr        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int ft_toupper(int ch)
+int	ft_toupper(int ch)
 {
-  if (ch >= 97 && ch <= 122)
-  {
-    ch = ch - 32;
-  }
-  return (ch);
+	if (ch >= 97 && ch <= 122)
+	{
+		ch = ch - 32;
+	}
+	return (ch);
 }

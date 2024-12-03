@@ -6,15 +6,15 @@
 /*   By: aloisiojr <aloisiojr@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 17:54:16 by aloisiojr         #+#    #+#             */
-/*   Updated: 2024/10/17 14:32:13 by aloisiojr        ###   ########.fr       */
+/*   Updated: 2024/12/03 14:45:57 by aloisiojr        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-  if (c >= 32 && c <= 126)
-    return (1);
-  return(0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }

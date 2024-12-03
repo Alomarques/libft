@@ -6,15 +6,15 @@
 /*   By: aloisiojr <aloisiojr@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 17:33:57 by aloisiojr         #+#    #+#             */
-/*   Updated: 2024/10/17 14:32:10 by aloisiojr        ###   ########.fr       */
+/*   Updated: 2024/12/03 14:43:32 by aloisiojr        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-  if (c >= 48 && c <= 57)
-    return (1);
-  return (0);
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
 }
